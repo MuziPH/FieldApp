@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Diesel Report Listing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="responsive_table">
+    <mat-table [dataSource]="rows" class="mat-elevation-z8">
+
+      <ng-container  matColumnDef="Bakkie">
+        <mat-header-cell *matHeaderCellDef>Bakkie</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.bakkieNumber}}</mat-cell>
+      </ng-container>
+
+      <ng-container  matColumnDef="Report_Date">
+        <mat-header-cell *matHeaderCellDef>Report_Date</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.reportDate}}</mat-cell>
+      </ng-container>
+
+      <ng-container  matColumnDef="Start_Kilos">
+        <mat-header-cell *matHeaderCellDef>Start_Kilos</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.startKilos}}</mat-cell>
+      </ng-container>
+      <ng-container  matColumnDef="End_Kilos">
+        <mat-header-cell *matHeaderCellDef>End_Kilos</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.endKilos}}</mat-cell>
+      </ng-container>
+
+      <ng-container  matColumnDef="Total_Kilos">
+        <mat-header-cell *matHeaderCellDef>Total_Kilos</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.dayTotalKilos}}</mat-cell>
+      </ng-container>
+
+      <ng-container  matColumnDef="Diesel">
+        <mat-header-cell *matHeaderCellDef>Diesel</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.dieselFilled}}</mat-cell>
+      </ng-container>
+
+      <ng-container  matColumnDef="Travel">
+        <mat-header-cell *matHeaderCellDef>Travel</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.notableTravel}}</mat-cell>
+      </ng-container>
+
+        <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+        <mat-row *matRowDef="let element; columns: tableColumns;"></mat-row>
+
+
+    </mat-table>
+  </div>
+</ion-content>

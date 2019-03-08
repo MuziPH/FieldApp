@@ -1,5 +1,8 @@
 {
   "name": "FieldApp",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxy": "http://websenseproxy.standardbank.co.za:8080"
 }
