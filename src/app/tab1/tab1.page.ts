@@ -9,7 +9,7 @@ import {AlertController, LoadingController} from '@ionic/angular';
     styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-    private dieselReport: DieselReport = {
+    public dieselReport: DieselReport = {
         reportDate: '',
         bakkieNumber: '',
         startKilos: null,
