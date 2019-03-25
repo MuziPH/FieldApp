@@ -5,7 +5,7 @@ import {ListDieselPage} from '../tab1/list-diesel/list-diesel.page';
 
 const routes: Routes = [
     {
-        path: 'tabs',
+        path: '',
         component: TabsPage,
         children: [
             {
